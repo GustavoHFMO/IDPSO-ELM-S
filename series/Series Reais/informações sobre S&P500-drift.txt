@@ -1,0 +1,5 @@
+S&P 500
+
+Lavielle, Marc, and Gilles Teyssiere. "Detection of multiple change-points in multivariate time series." Lithuanian Mathematical Journal 46.3 (2006): 287-306.
+
+Drifts: [448, 508, 1715, 2826, 4119]

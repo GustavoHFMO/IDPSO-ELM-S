@@ -1,0 +1,10 @@
+Dowjones
+
+Adams, Ryan Prescott, and David JC MacKay. "Bayesian online changepoint detection." arXiv preprint arXiv:0710.3742 (2007).
+
+Tamanho: 735 pontos
+Primeiro Drift: 124 
+Segundo Drift: 307
+Terceiro Drift: 510
+
+[124, 307, 510]
