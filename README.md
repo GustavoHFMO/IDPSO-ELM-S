@@ -10,7 +10,7 @@ In the module [Main](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/Main
 > R. C. Cavalcante and A. L. Oliveira, “An approach to handle concept drift in financial time series based on extreme learning machines and explicit drift detection,” in Neural Networks (IJCNN), 2015 International Joint Conference on. IEEE, 2015, pp. 1–8.
 
 ## [ELM-FEDD:](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/algoritmos_online/ELM_FEDD.py)
-> R. C. Cavalcante and A. L. Oliveira, “An approach to handle concept drift in financial time series based on extreme learning machines and explicit drift detection,” in Neural Networks (IJCNN), 2015 International Joint Conference on. IEEE, 2015, pp. 1–8.
+> R. C. Cavalcante, L. L. Minku, and A. L. Oliveira, “FEDD: Feature Extraction for Explicit Concept Drift Detection in time series,” in Neural Networks (IJCNN), 2016 International Joint Conference on. IEEE, 2016, pp. 740–747.
 
 ## [IDPSO-ELM-B:](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/algoritmos_online/IDPSO_ELM_B.py)
 > OLIVEIRA, Gustavo HFMO et al. Time series forecasting in the presence of concept drift: A pso-based approach. In: 2017 IEEE 29th International Conference on Tools with Artificial Intelligence (ICTAI). IEEE, 2017. p. 239-246.
