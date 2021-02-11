@@ -1,7 +1,7 @@
 # IDPSO-ELM-S
 
 ## Code:
-In the module [Main](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/Main.py), we show how all approaches can be executed. The approaches are:
+In the module [Main](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/Main.py), we show how the approaches mentioned below can be executed.
 
 ## [ELM-DDM:](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/algoritmos_online/ELM_DDM.py)
 > R. C. Cavalcante and A. L. Oliveira, “An approach to handle concept drift in financial time series based on extreme learning machines and explicit drift detection,” in Neural Networks (IJCNN), 2015 International Joint Conference on. IEEE, 2015, pp. 1–8.
