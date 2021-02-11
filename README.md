@@ -27,7 +27,7 @@ In this project the following algorithms were implemented:
 git clone https://github.com/GustavoHFMO/IDPSO-ELM-S.git
 
 # Acessing the repository
-cd GMM-VRD
+cd IDPSO-ELM-S
 
 # Running the code
 python Main.py
