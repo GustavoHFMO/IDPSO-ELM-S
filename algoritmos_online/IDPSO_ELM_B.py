@@ -57,6 +57,8 @@ class IDPSO_ELM_B():
         self.limite = limite
         self.w = w
         self.c = c
+        
+        self.tecnica = "IDPSO_ELM_B"
     
     def Executar(self, grafico = None):
         '''
@@ -191,9 +193,12 @@ class IDPSO_ELM_B():
         #computando o tempo de execucao
         tempo_execucao = (end_time-start_time)
         
+        # variables to store 
+        self.target = stream
+        self.predictions = predicoes_vetor
+        
         if(grafico == True):
-            tecnica = "IDPSO_ELM_B"
-            print(tecnica)
+            print(self.tecnica)
             print("Alarmes:")
             print(alarmes)
             print("Deteccoes:")
@@ -206,7 +211,7 @@ class IDPSO_ELM_B():
         #plotando o grafico de erro
         if(grafico == True):
             g = Grafico()
-            g.Plotar_graficos(stream, predicoes_vetor, deteccoes, alarmes, erro_stream_vetor, self.n, atrasos, falsos_alarmes, tempo_execucao, MAE, nome=tecnica)
+            g.Plotar_graficos(stream, predicoes_vetor, deteccoes, alarmes, erro_stream_vetor, self.n, atrasos, falsos_alarmes, tempo_execucao, MAE, nome=self.tecnica)
             
         #retorno do metodo
         return falsos_alarmes, atrasos, MAE, tempo_execucao

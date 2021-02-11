@@ -45,6 +45,8 @@ class ELM_DDM():
         
         self.w = w
         self.c = c
+        
+        self.tecnica = "ELM-DDM"
     
     def Computar_estatisticas_DDM_desvio(self, vetor_caracteristicas, lags, ELM):
         '''
@@ -207,9 +209,12 @@ class ELM_DDM():
         #computando o tempo de execucao
         tempo_execucao = (end_time-start_time)
         
+        # variables to store 
+        self.target = stream
+        self.predictions = predicoes_vetor
+        
         if(grafico == True):
-            tecnica = "ELM-DDM"
-            print(tecnica)
+            print(self.tecnica)
             print("Alarmes:")
             print(alarmes)
             print("Deteccoes:")
@@ -222,7 +227,7 @@ class ELM_DDM():
         #plotando o grafico de erro
         if(grafico == True):
             g = Grafico()
-            g.Plotar_graficos(stream, predicoes_vetor, deteccoes, alarmes, erro_stream_vetor, self.n, atrasos, falsos_alarmes, tempo_execucao, MAE, nome=tecnica)
+            g.Plotar_graficos(stream, predicoes_vetor, deteccoes, alarmes, erro_stream_vetor, self.n, atrasos, falsos_alarmes, tempo_execucao, MAE, nome=self.tecnica)
                            
         #retorno do metodo
         return falsos_alarmes, atrasos, MAE, tempo_execucao

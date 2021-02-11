@@ -46,6 +46,8 @@ class ELM_FEDD():
         self.Lambda = Lambda
         self.w = w
         self.c = c
+        
+        self.tecnica = "ELM-FEDD"
     
     def Executar(self, grafico = None):
         '''
@@ -216,9 +218,12 @@ class ELM_FEDD():
         #computando o tempo de execucao
         tempo_execucao = (end_time-start_time)
         
+        # variables to store 
+        self.target = stream
+        self.predictions = predicoes_vetor
+        
         if(grafico == True):
-            tecnica = "ELM-FEDD"
-            print(tecnica)
+            print(self.tecnica)
             print("Alarmes:")
             print(alarmes)
             print("Deteccoes:")
@@ -231,7 +236,7 @@ class ELM_FEDD():
         #plotando o grafico de erro
         if(grafico == True):
             g = Grafico()
-            g.Plotar_graficos(stream, predicoes_vetor, deteccoes, alarmes, erro_stream_vetor, self.n, atrasos, falsos_alarmes, tempo_execucao, MAE, nome=tecnica)
+            g.Plotar_graficos(stream, predicoes_vetor, deteccoes, alarmes, erro_stream_vetor, self.n, atrasos, falsos_alarmes, tempo_execucao, MAE, nome=self.tecnica)
                            
         #retorno do metodo
         return falsos_alarmes, atrasos, MAE, tempo_execucao

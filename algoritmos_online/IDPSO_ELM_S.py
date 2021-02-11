@@ -57,6 +57,8 @@ class IDPSO_ELM_S():
         self.w = w
         self.c = c
         
+        self.tecnica = "IDPSO-ELM-S"
+        
     def Executar(self, grafico = None):
         '''
         Metodo para executar o procedimento do algoritmo
@@ -188,9 +190,12 @@ class IDPSO_ELM_S():
         #computando o tempo de execucao
         tempo_execucao = (end_time-start_time)
         
+        # variables to store 
+        self.target = stream
+        self.predictions = predicoes_vetor
+        
         if(grafico == True):
-            tecnica = "IDPSO-ELM-S"            
-            print(tecnica)
+            print(self.tecnica)
             print("Alarmes:")
             print(alarmes)
             print("Deteccoes:")
@@ -203,7 +208,7 @@ class IDPSO_ELM_S():
         #plotando o grafico de erro
         if(grafico == True):
             g = Grafico()
-            g.Plotar_graficos(stream, predicoes_vetor, deteccoes, alarmes, erro_stream_vetor, self.n, atrasos, falsos_alarmes, tempo_execucao, MAE, nome=tecnica)
+            g.Plotar_graficos(stream, predicoes_vetor, deteccoes, alarmes, erro_stream_vetor, self.n, atrasos, falsos_alarmes, tempo_execucao, MAE, nome=self.tecnica)
             
             
         #retorno do metodo

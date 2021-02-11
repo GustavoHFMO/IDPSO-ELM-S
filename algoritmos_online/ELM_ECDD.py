@@ -46,6 +46,8 @@ class ELM_ECDD():
         self.Lambda = Lambda
         self.w = w
         self.c = c
+        
+        self.tecnica = "ELM-ECDD"
     
     def Computar_estatisticas_ECDD(self, vetor_caracteristicas, lags, ELM):
         '''
@@ -211,9 +213,12 @@ class ELM_ECDD():
         #computando o tempo de execucao
         tempo_execucao = (end_time-start_time)
         
+        # variables to store 
+        self.target = stream
+        self.predictions = predicoes_vetor
+        
         if(grafico == True):
-            tecnica = "ELM-ECDD"
-            print(tecnica)
+            print(self.tecnica)
             print("Alarmes:")
             print(alarmes)
             print("Deteccoes:")
@@ -226,7 +231,7 @@ class ELM_ECDD():
         #plotando o grafico de erro
         if(grafico == True):
             g = Grafico()
-            g.Plotar_graficos(stream, predicoes_vetor, deteccoes, alarmes, erro_stream_vetor, self.n, atrasos, falsos_alarmes, tempo_execucao, MAE, nome=tecnica)
+            g.Plotar_graficos(stream, predicoes_vetor, deteccoes, alarmes, erro_stream_vetor, self.n, atrasos, falsos_alarmes, tempo_execucao, MAE, nome=self.tecnica)
                            
         #retorno do metodo
         return falsos_alarmes, atrasos, MAE, tempo_execucao
