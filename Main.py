@@ -20,36 +20,59 @@ from algoritmos_online.ELM_FEDD import ELM_FEDD
 from algoritmos_online.IDPSO_ELM_B import IDPSO_ELM_B
 from algoritmos_online.IDPSO_ELM_S import IDPSO_ELM_S
 
-# importando libs para auxiliar na execucao dos metodos
+
+# importing libs to help in the methods execution
 from ferramentas.Importar_dataset import Datasets
 from ferramentas.Particionar_series import Particionar_series
 
-#1. importanto o dataset
+#1. importing the datasets
 dtst = Datasets()
+
+#1.1 real datasets ###################################################
+# 1 = Dow 30
+# 2 = Nasdaq
+# 3 = S&P 500
 dataset = dtst.Leitura_dados(dtst.bases_reais(1), csv=True)
 dataset = Particionar_series().Normalizar(dataset)
-        
-    
-#2. importanto o dataset
-# ELM-DDM
-elm_ddm = ELM_DDM(dataset)
-elm_ddm.Executar(grafico=True)
+#1.1 #################################################################
 
-# ELM-ECDD
-elm_ecdd = ELM_ECDD(dataset)
-elm_ecdd.Executar(grafico=True)
+#1.2 synthetic datasets ##############################################
+# dtst.bases_lineares(1)
+# dtst.bases_nlineares(1)
+# dtst.bases_sazonais()
+# dtst.bases_hibridas()
+#dataset = dtst.Leitura_dados(dtst.bases_hibridas(1), csv=True)
+#dataset = Particionar_series().Normalizar(dataset)
+#1.2 ##################################################################
 
-# ELM-FEDD
-elm_fedd = ELM_FEDD(dataset)
-elm_fedd.Executar(grafico=True)
+#2. importing and running the algorithms
+# IDPSO-ELM-S
+idpso_elm_s = IDPSO_ELM_S(dataset)
+idpso_elm_s.Executar(grafico=True)
 
 # IDPSO-ELM-B
 idpso_elm_b = IDPSO_ELM_B(dataset)
 idpso_elm_b.Executar(grafico=True)
 
-# IDPSO-ELM-S
-idpso_elm_s = IDPSO_ELM_S(dataset)
-idpso_elm_s.Executar(grafico=True)
+# ELM-FEDD
+elm_fedd = ELM_FEDD(dataset)
+elm_fedd.Executar(grafico=True)
+
+# ELM-ECDD
+elm_ecdd = ELM_ECDD(dataset)
+elm_ecdd.Executar(grafico=True)
+
+# ELM-DDM
+elm_ddm = ELM_DDM(dataset)
+elm_ddm.Executar(grafico=True)
+
+
+
+
+
+
+
+
 
 
 
