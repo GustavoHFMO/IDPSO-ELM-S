@@ -45,7 +45,7 @@ dataset = Particionar_series().Normalizar(dataset)
 #dataset = dtst.Leitura_dados(dtst.bases_hibridas(1), csv=True)
 #dataset = Particionar_series().Normalizar(dataset)
 #1.2 ##################################################################
-'''
+
 #2. IMPORTING AND RUNNING ALGORITHMS ################################
 # IDPSO-ELM-S
 idpso_elm_s = IDPSO_ELM_S(dataset)
@@ -58,21 +58,20 @@ idpso_elm_b.Executar(grafico=True)
 # ELM-FEDD
 elm_fedd = ELM_FEDD(dataset)
 elm_fedd.Executar(grafico=True)
-'''
+
 # ELM-ECDD
 elm_ecdd = ELM_ECDD(dataset)
 elm_ecdd.Executar(grafico=True)
-'''
+
 # ELM-DDM
 elm_ddm = ELM_DDM(dataset)
 elm_ddm.Executar(grafico=True)
 #2. ###################################################################
-'''
 
 ####### 3. STORING THE PREDICTIONS ################################################################
 import pandas as pd
-df = pd.DataFrame(data={'predictions': elm_ecdd.predictions, 'target':elm_ecdd.target})
-df.to_csv("images/"+elm_ecdd.tecnica+".csv")
+df = pd.DataFrame(data={'predictions': idpso_elm_s.predictions, 'target':idpso_elm_s.target})
+df.to_csv("images/"+idpso_elm_s.tecnica+".csv")
 ####### 3. STORING THE PREDICTIONS ################################################################
 
 
