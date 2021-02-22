@@ -11,6 +11,19 @@ In: 2017 IEEE 29th International Conference on Tools with Artificial Intelligenc
 IEEE, 2017. p. 239-246.
 https://ieeexplore.ieee.org/document/8371949
 
+IDPSO-ELM-S is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>
+
 '''
 from ferramentas.Janela_deslizante import Janela
 from ferramentas.Importar_dataset import Datasets
@@ -96,7 +109,8 @@ class IDPSO_ELM_B():
         janela_caracteristicas.Ajustar(treinamento_inicial)
         
         #ativando o sensor de comportamento de acordo com a primeira janela de caracteristicas para media e desvio padrão
-        b = B(self.limite, self.w, self.c)        b.armazenar_conceito(janela_caracteristicas.dados, self.lags, enxame)
+        b = B(self.limite, self.w, self.c)
+        b.armazenar_conceito(janela_caracteristicas.dados, self.lags, enxame)
 
         ################################################################################################################################################
         ################################# PERIODO DINAMICO #############################################################################################
