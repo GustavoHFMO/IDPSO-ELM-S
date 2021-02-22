@@ -35,3 +35,6 @@ python Main.py
 
 ## Result
 ![](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/images/idpso_elm_s_execution.png)
+
+## License
+This project is under a GNU General Public License (GPL) Version 3. See [LICENSE](https://www.gnu.org/licenses/gpl-3.0-standalone.html) for more information.
