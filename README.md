@@ -1,4 +1,4 @@
-# Project Requirements
+# Requirements
 * Python 3 
 * Use pip to install any dependencies.
  
