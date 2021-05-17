@@ -1,4 +1,4 @@
-# IDPSO-ELM-S to handle concept drifts in time series forecasting
+# IDPSO-ELM-S: Time series forecasting in the presence of concept drift: A pso-based approach
 
 The module [Main.py](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/Main.py) executes the algorithms described below in real and synthetic time series.
 
