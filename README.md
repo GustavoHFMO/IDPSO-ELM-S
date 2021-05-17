@@ -1,5 +1,7 @@
 # IDPSO-ELM-S to handle concept drifts in time series forecasting
 
+The module [Main.py](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/Main.py) executes the algorithms described below in real and synthetic time series.
+
 ## Usage
 ```
 # Cloning the repository
@@ -10,14 +12,10 @@ cd IDPSO-ELM-S
 
 # Installing the denpencies
 pip install -r requirements.txt
-```
 
-The module [Main.py](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/Main.py) executes the algorithms described below in real and synthetic time series.
-
-'''
 # Running the code
 python Main.py
-'''
+```
 
 ## [ELM-DDM:](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/algoritmos_online/ELM_DDM.py)
 > R. C. Cavalcante and A. L. Oliveira, “An approach to handle concept drift in financial time series based on extreme learning machines and explicit drift detection,” in Neural Networks (IJCNN), 2015 International Joint Conference on. IEEE, 2015, pp. 1–8.
