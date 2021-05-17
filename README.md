@@ -10,7 +10,7 @@ git clone https://github.com/GustavoHFMO/IDPSO-ELM-S.git
 # Acessing the repository
 cd IDPSO-ELM-S
 
-# Installing the denpencies
+# Installing the dependencies
 pip install -r requirements.txt
 
 # Running the code
