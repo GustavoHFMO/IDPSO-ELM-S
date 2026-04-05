@@ -2,6 +2,9 @@
 
 ## 📄 Paper
 [IDPSO-ELM-S (ICTAI)](https://github.com/GustavoHFMO/IDPSO-ELM-S/blob/master/8-%20Time_Series_Forecasting_in_the_Presence_of_Concept_Drift_A_PSO-based_Approach.pdf)
+> OLIVEIRA, Gustavo HFMO et al. Time series forecasting in the presence of concept drift: A pso-based approach. In: 2017 IEEE 29th International Conference on Tools with Artificial Intelligence (ICTAI). IEEE, 2017. p. 239-246.
+
+
 
 ## Problem
 Drift detection based on a single model is unreliable and prone to false positives and delays.
